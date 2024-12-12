@@ -8,19 +8,26 @@
 // Ajuste la fonction "multiply" qui prend deux paramètres (a et b) et retourne la somme multipliée des deux paramètres.
 // Exemple : a = 2, b = 3 => 2 * 3 = 6
 
-export const multiply = (a, b) => {};
-
-console.info("Exercice 1 :", multiply(2, 3));
+export const multiply = (a, b) => {
+	return a * b;
+};
+// biome-ignore lint/suspicious/noConsoleLog: <explanation>
+console.log(multiply(2, 3));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 2
 
 // Ajuste la fonction qui prend en paramètre un tableau et qui retourne le premier élément du tableau.
-// Exemple : [1, 2, 3] => 1
+// const array = [1, 2, 3];
+// console.log(array[0]);
 
-// export const getFirstElement = () => {}
+// Affichage du premier élément du tableau
 
-// console.info("Exercice 2 : ", getFirstElement([1, 2, 3]));
+export const getFirstElement = (array) => {
+	return array[0];
+};
+
+console.info("Exercice 2 : ", getFirstElement([1, 2, 3]));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 3
@@ -28,10 +35,12 @@ console.info("Exercice 1 :", multiply(2, 3));
 // Ajuste la fonction qui prend en paramètre un tableau et qui doit supprimer le dernier élément du tableau.
 // Exemple : [1, 2, 3] => [1, 2]
 
-// export const removeLastElement = () => {
-// };
+export const removeLastElement = (array) => {
+	array.pop();
+	return array;
+};
 
-// console.info("Exercice 3 : ", removeLastElement([1, 2, 3]));
+console.info("Exercice 3 : ", removeLastElement([1, 2, 3]));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 4
@@ -39,9 +48,16 @@ console.info("Exercice 1 :", multiply(2, 3));
 // Ajuste la fonction qui prend en paramètre un tableau comprennant des nombres et qui doit retourner la somme de tous les nombres du tableau.
 // Exemple : [1, 2, 3] => 6
 
-// export const sumArray = () => {}
+export const sumArray = (array) => {
+	let sum = 0;
 
-// console.info("Exercice 4 : ", sumArray([5, 6, 7]));
+	for (let i = 0; i < array.length; i++) {
+		sum += array[i];
+	}
+	return sum;
+};
+
+console.info("Exercice 4 : ", sumArray([5, 6, 7]));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 5
@@ -52,6 +68,14 @@ console.info("Exercice 1 :", multiply(2, 3));
 // export const reverseString = () => {}
 
 // console.info("Exercice 5 : ", reverseString("Hello"));
+// "nyoph"
+export function reverseString(string) {
+	if (string === "") {
+		return "";
+	}
+	return string.substr(1) + string.charAt(0);
+}
+console.info("Exercice 5 : ", reverseString("Hello"));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 6
@@ -59,9 +83,11 @@ console.info("Exercice 1 :", multiply(2, 3));
 // Ajuste la fonction qui prend en paramètre un tableau et qui doit retourner le plus grand nombre du tableau.
 // Exemple : [1, 2, 3] => 3
 
-// export const getMax = () => {}
+export const getMax = (array2) => {
+	return console.log(array2);
+};
 
-// console.info("Exercice 6 : ", getMax([1, 2, 3]));
+console.info("Exercice 6 : ", getMax([1, 2, 3]));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 7
