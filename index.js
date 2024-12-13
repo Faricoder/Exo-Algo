@@ -83,8 +83,9 @@ console.info("Exercice 5 : ", reverseString("Hello"));
 // Ajuste la fonction qui prend en paramètre un tableau et qui doit retourner le plus grand nombre du tableau.
 // Exemple : [1, 2, 3] => 3
 
-export const getMax = (array2) => {
-	return console.log(array2);
+export const getMax = (array) => {
+	const result = array.sort((a, b) => a - b);
+	return result[result.length - 1];
 };
 
 console.info("Exercice 6 : ", getMax([1, 2, 3]));
@@ -95,9 +96,11 @@ console.info("Exercice 6 : ", getMax([1, 2, 3]));
 // Ajuste la fonction qui prend en paramètre un tableau et qui doit retourner le plus petit nombre du tableau.
 // Exemple : [1, 2, 3] => 1
 
-// export const getMin = () => {}
+export const getMin = (array) => {
+	return array;
+};
 
-// console.info("Exercice 7 : ", getMin([1, 2, 3]));
+console.info("Exercice 7 : ", getMin([1, 2, 3]));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 8
