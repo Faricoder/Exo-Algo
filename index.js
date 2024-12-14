@@ -97,7 +97,8 @@ console.info("Exercice 6 : ", getMax([1, 2, 3]));
 // Exemple : [1, 2, 3] => 1
 
 export const getMin = (array) => {
-	return array;
+	const result = array.sort((a, b) => a - b);
+	return result[0];
 };
 
 console.info("Exercice 7 : ", getMin([1, 2, 3]));
@@ -108,9 +109,19 @@ console.info("Exercice 7 : ", getMin([1, 2, 3]));
 // Ajuste la fonction qui prend en paramètre une string et qui doit retourner la string sans les voyelles.
 // Exemple : "Hello" => "Hll"
 
-// export const removeVowels = () => {}
+export const removeVowels = (mot) => {
+	let result = "";
+	const vowels = "aeiouyAEIOUY";
 
-// console.info("Exercice 8 : ", removeVowels("Hello"));
+	for (let i = 0; i < mot.length; i++) {
+		if (!vowels.includes(mot[i])) {
+			result += mot[i];
+		}
+	}
+	return result;
+};
+
+console.info("Exercice 8 : ", removeVowels("Hello"));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 9
