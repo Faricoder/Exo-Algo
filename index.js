@@ -142,11 +142,19 @@ console.info("Exercice 9 : ", sortArray([1, 3, 2]));
 // Ajuste la fonction qui prend en paramètre une string et qui renvoie un tableau avec toutes les rotations possibles de cette string.
 // Exemple : "Hello" => ["elloH", "lloHe", "loHel", "oHell", "Hello"]
 
-// export const getStringRotations = () => {
+export const getStringRotations = (word) => {
+	const initialWord = word;
+	const tri = [];
 
-// };
+	do {
+		word = word.slice(1) + word[0];
+		tri.push(word);
+	} while (word !== initialWord);
 
-// console.info("Exercice 10 : ", getStringRotations("Hello"));
+	return tri;
+};
+
+console.info("Exercice 10 : ", getStringRotations("Hello"));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 11
@@ -154,9 +162,15 @@ console.info("Exercice 9 : ", sortArray([1, 3, 2]));
 // Ajuste la fonction qui prend en paramètre un tableau et qui doit ajouter le nombre 1 à chaque élément du tableau.
 // Exemple : [1, 2, 3] => [2, 3, 4]
 
-// export const incrementArray = () => {}
+export const incrementArray = (array) => {
+	for (let i = 0; i < array.length; i++) {
+		array[i] += 1;
+	}
 
-// console.info("Exercice 11 : ", incrementArray([1, 2, 3]));
+	return array;
+};
+
+console.info("Exercice 11 : ", incrementArray([1, 2, 3]));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 12
@@ -164,9 +178,17 @@ console.info("Exercice 9 : ", sortArray([1, 3, 2]));
 // Ajuste la fonction qui prend en paramètre un tableau de string et qui doit retourner un tableau avec la longueur de chaque string.
 // Exemple : ["Hello", "World"] => [5, 5]
 
-// export const getLengths = () => {}
+export const getLengths = (strings) => {
+	const lengths = [];
 
-// console.info("Exercice 12 : ", getLengths(["Hello", "World"]));
+	for (let i = 0; i < strings.length; i++) {
+		lengths[i] = strings[i].length;
+	}
+
+	return lengths;
+};
+
+console.info("Exercice 12 : ", getLengths(["Hello", "World"]));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 13
