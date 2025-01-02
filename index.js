@@ -196,9 +196,11 @@ console.info("Exercice 12 : ", getLengths(["Hello", "World"]));
 // Ajuste la fonction qui prend en paramètre un tableau de string et qui doit retourner un tableau avec toutes les premières lettres de chaque string.
 // Exemple : ["Hello", "World"] => ["H", "W"]
 
-// export const getFirstLetters = () => {}
+export const getFirstLetters = (array) => {
+	return array.map((string) => string[0]);
+};
 
-// console.info("Exercice 13 : ", getFirstLetters(["Hello", "World"]));
+console.info("Exercice 13 : ", getFirstLetters(["Hello", "World"]));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 14
@@ -206,9 +208,12 @@ console.info("Exercice 12 : ", getLengths(["Hello", "World"]));
 // Ajuste la fonction qui prend en paramètre un tableau de string et qui doit retourner un tableau avec toutes les dernières lettres de chaque string.
 // Exemple : ["Hello", "World"] => ["o", "d"]
 
-// export const getLastLetters = () => {}
-
-// console.info("Exercice 14 : ", getLastLetters(["Hello", "World"]));
+export const getLastLetters = (strings) => {
+	return strings.map((str) => {
+		return str[str.length - 1];
+	});
+};
+console.info("Exercice 14 : ", getLastLetters(["Hello", "World"]));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 15
@@ -216,14 +221,14 @@ console.info("Exercice 12 : ", getLengths(["Hello", "World"]));
 // Ajuste la fonction qui prend en paramètre un tableau de string et qui doit renvoyer tout les string qui ont une longueur de 5 caractères ou plus.
 // Exemple : ["Hello", "World","Test", "Salut", "Yo"] => ["Hello", "World", "Salut"]
 
-// export const filterLongStrings = () => {
+export const filterLongStrings = (strings) => {
+	return strings.filter((str) => str.length === 5);
+};
 
-// };
-
-// console.info(
-// 	"Exercice 15 : ",
-// 	filterLongStrings(["Hello", "World", "Test", "Salut", "Yo"]),
-// );
+console.info(
+	"Exercice 15 : ",
+	filterLongStrings(["Hello", "World", "Test", "Salut", "Yo"]),
+);
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 16
